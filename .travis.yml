@@ -25,12 +25,25 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"
-  app: "docker-fullstack"
-  env: "DockerFullstack-env"
-  bucket_name: elasticbeanstalk-ap-northeast-2-144623871309
-  bucket_path: "docker-fullstack"
+  app: "react-nodejs-based"
+  env: "ReactNodejsBased-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-000140339722"
+  bucket_path: "react-nodejs-based"
   on:
     branch: main
+  access_key_id: $AWS_ACCESS_KEY2
+  secret_access_key: $AWS_SECRET_ACCESS_KEY2
 
-  access_key_id : $AWS_ACCESS_KEY
-  secret_access_key: $AWS_ACCESS_PASSWORD
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "ap-northeast-2"
+#   app: "docker-fullstack"
+#   env: "DockerFullstack-env"
+#   bucket_name: elasticbeanstalk-ap-northeast-2-144623871309
+#   bucket_path: "docker-fullstack"
+#   on:
+#     branch: main
+
+#   access_key_id : $AWS_ACCESS_KEY
+#   secret_access_key: $AWS_ACCESS_PASSWORD
